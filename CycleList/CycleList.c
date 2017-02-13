@@ -24,7 +24,7 @@ bool insert(CLINK *p_clink,NODE_DATA *p_data)
 	}
 	int i=0;
 	NODE_DATA *p_index=p_clink->head;
-	while(p_index->next!=p_clink->head)
+	while(p_index->next!=p_clink->head)   // 将指针推向最后一个元素 
 	{
 		p_index=p_index->next;
 	}
@@ -41,7 +41,7 @@ bool print(CLINK *p_clink)
 		return false;
 	}
 	NODE_DATA *p_index=p_clink->head;
-	while(p_index->next!=p_clink->head)
+	while(p_index->next!=p_clink->head)   //最后一个元素不能进入循环 
 	{
 		printf("%d\n",p_index->data);
 		p_index=p_index->next;
